@@ -1,0 +1,506 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+p {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  min-height: 100vh;
+  background-image: url("img/transp_patttern.png");
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 300px;
+  margin: 0 auto;
+  padding: 24px;
+}
+.container {
+  display: flex;
+}
+h1 {
+  margin-top: 0px;
+  margin-bottom: 35px;
+}
+.name-of-tea {
+  display: grid;
+  gap: 12px;
+}
+.description-of-tea {
+  display: flex;
+}
+.img-of-tea {
+  max-width: 50%;
+  display: grid;
+  gap: 10px;
+  max-width: 420px;
+  margin-right: 15px;
+}
+.img-of-tea img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.img-of-tea .img-preview {
+  width: 33%;
+  height: auto;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.img-of-tea .img-preview:hover {
+  opacity: 1;
+}
+
+.review {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  cursor: pointer;
+}
+.send-review {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 56px;
+}
+.prices {
+  display: grid;
+  gap: 6px;
+}
+.price-of-tea {
+  width: 100%;
+  margin-left: 15px;
+}
+.blok-of-prices {
+  background-color: #f6f7f8;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px 0;
+  border: solid 1px #f0f0f0;
+  cursor: pointer;
+}
+.info {
+  display: grid;
+  align-content: center;
+}
+.buy {
+  display: flex;
+  gap: 7px;
+}
+.backet {
+  padding: 12px;
+  max-height: 48px;
+  height: 100%;
+  background-color: #e9f2c3;
+}
+.weight {
+  font-weight: 600;
+  font-size: 14px;
+}
+.small-text {
+  color: gray;
+  font-size: 10px;
+  font-weight: 700;
+}
+.price {
+  color: red;
+  font-weight: 600;
+  font-size: 18px;
+}
+.info-price {
+  display: grid;
+  align-content: center;
+  justify-items: end;
+}
+.small-text-price {
+  color: gray;
+  font-size: 13px;
+  font-weight: 600;
+  margin-left: 15px;
+  text-decoration: line-through;
+}
+.red-text {
+  font-size: 12px;
+  color: #dc3545;
+  font-weight: 700;
+}
+.main-cat {
+  background-color: #fefcef;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  padding: 15px 25px;
+  text-transform: uppercase;
+  margin: 0;
+  color: #444;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e8e8e8;
+
+  display: flex;
+  align-items: center;
+}
+.categories {
+  display: grid;
+  align-content: start;
+  gap: 0px;
+  margin-left: 15px;
+  max-width: 270px;
+}
+.block-cat {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 25px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #606060;
+  font-weight: 600;
+  position: relative;
+  border-bottom: 1px solid #e8e8e8;
+  min-height: 51px;
+  align-items: center;
+  background-color: #f6f7f8;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.block-cat svg {
+  min-width: 10px;
+}
+.product {
+  margin-right: 15px;
+}
+.like svg {
+  max-width: 32px;
+  color: gray;
+}
+.like:hover svg {
+  color: black;
+}
+.like {
+  max-height: 32px;
+  cursor: pointer;
+}
+.breadcrumbs {
+  font-size: 12px;
+  line-height: 18px;
+  color: #444;
+}
+.blok-of-prices:hover .backet {
+  color: #f5d730;
+  background-color: #333;
+}
+
+.backet {
+  color: #444;
+  transition:
+    color 0.4s ease,
+    background-color 0.4s ease;
+}
+.review {
+  transition: color 0.3s ease;
+}
+
+.review-svg,
+.review-svg path {
+  transition:
+    fill 0.3s ease,
+    stroke 0.3s ease;
+}
+
+.review:hover {
+  color: #0056b3;
+}
+
+.review:hover .review-svg path {
+  fill: #0056b3;
+  stroke: #0056b3;
+}
+.block-cat:hover {
+  color: #202020;
+}
+.product-image {
+  position: relative;
+  display: inline-block;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+.product-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+.zoom-icon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 26px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #80bc14;
+  color: #fff;
+  cursor: pointer;
+}
+.product-image:hover .zoom-icon {
+  background-color: rgba(255, 255, 255, 0);
+}
+.product-image:hover .zoom-icon {
+  background-color: rgba(255, 255, 255, 0);
+  color: #80bc14;
+}
+.image-modal {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0);
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  box-sizing: border-box;
+
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    background 0.3s ease,
+    visibility 0.3s ease;
+}
+.image-modal.active {
+  opacity: 1;
+  visibility: visible;
+  background: rgba(0, 0, 0, 0.8);
+}
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 90vw;
+  max-height: 90vh;
+
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+.image-modal.active .modal-content {
+  transform: scale(1);
+}
+.modal-image {
+  display: block;
+  max-width: 90vw;
+  max-height: calc(90vh - 25px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.modal-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(204, 204, 204);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Helvetica Neue,
+    Arial,
+    sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+.modal-close {
+  padding: 0;
+  border: none;
+  background: none;
+  color: rgb(204, 204, 204);
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 0;
+  cursor: pointer;
+  padding-top: 8px;
+  transition: color 0.2s ease;
+}
+.modal-close:hover {
+  color: white;
+}
+.backet {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-icon {
+  display: block;
+}
+
+.cart-counter {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  display: none;
+  color: inherit;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.cart-counter.active {
+  display: block;
+}
+.like {
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+}
+.like::after {
+  content: "Добавить в избранное";
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  padding: 3px 10px;
+  background: #5d5d5d;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+  pointer-events: none;
+}
+.like::before {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + 0px);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #444;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+  pointer-events: none;
+}
+.like:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.like:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+.hidden-categories {
+  display: none;
+}
+
+.hidden-categories.active {
+  display: block;
+}
+
+.more-categories {
+  cursor: pointer;
+}
+
+.more-categories.active .more-arrow {
+  transform: rotate(90deg);
+}
+@media (max-width: 1048px) {
+  .container {
+    display: grid;
+    gap: 24px;
+  }
+  .img-of-tea {
+    max-width: 100%;
+  }
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin-left: 0px;
+    gap: 12px;
+  }
+  .main-cat {
+    flex: 0 0 100%;
+  }
+  .hidden-categories.active {
+    display: contents;
+  }
+  .block-cat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    max-height: 46px;
+    box-sizing: border-box;
+
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #444;
+
+    background-color: #faf8f8;
+    border: 1px solid #ededed;
+    border-radius: 12px;
+
+    position: relative;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+    gap: 8px;
+  }
+  .main-cat {
+    padding: 15px 0px;
+    background-color: #fefcef00;
+    border-bottom: 0px solid #e8e8e800;
+    padding-bottom: 15px;
+    padding-top: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .description-of-tea {
+    display: grid;
+    gap: 16px;
+  }
+  .send-review {
+    margin-bottom: 32px;
+  }
+  .img-of-tea {
+    margin-right: 0px;
+  }
+  .product {
+    margin-right: 0px;
+  }
+  .price-of-tea {
+    margin-left: 0px;
+  }
+}
